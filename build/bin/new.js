@@ -16,6 +16,7 @@ const fileSave = require('file-save');
 const uppercamelcase = require('uppercamelcase');
 const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
+//组件名转大驼峰
 const ComponentName = uppercamelcase(componentname);
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 const Files = [

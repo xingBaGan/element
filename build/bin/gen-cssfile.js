@@ -18,12 +18,13 @@ function fileExists(filePath) {
 themes.forEach((theme) => {
   var isSCSS = theme !== 'theme-default';
   var indexContent = isSCSS ? '@import "./base.scss";\n' : '@import "./base.css";\n';
-  Components.forEach(function(key) {
+  Components.forEach(function (key) {
     if (['icon', 'option', 'option-group'].indexOf(key) > -1) return;
     var fileName = key + (isSCSS ? '.scss' : '.css');
     indexContent += '@import "./' + fileName + '";\n';
+    // /package/[theme]/src/[component].scss
     var filePath = path.resolve(basepath, theme, 'src', fileName);
-    if (!fileExists(filePath)) {
+    if (!fileExists(filePath)) {//组件配置文件遗漏检测,会去创建
       fs.writeFileSync(filePath, '', 'utf8');
       console.log(theme, ' 创建遗漏的 ', fileName, ' 文件');
     }

@@ -307,6 +307,10 @@
             {
               "path": "/drawer",
               "title": "Drawer 抽屉"
+            },
+            {
+              "path": "/hello-world",
+              "title": "HelloWorld 测试组件"
             }
           ]
         }
@@ -621,6 +625,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/hello-world",
+              "title": "HelloWorld"
             }
           ]
         }
@@ -935,6 +943,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/hello-world",
+              "title": "HelloWorld"
             }
           ]
         }
@@ -1249,6 +1261,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/hello-world",
+              "title": "HelloWorld"
             }
           ]
         }

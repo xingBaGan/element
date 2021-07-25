@@ -23,7 +23,7 @@ if (componentFile.some(item => item.lang === lang)) {
   process.exit(1);
 }
 let componentNew = Object.assign({}, componentFile.filter(item => item.lang === 'en-US')[0], { lang });
-componentFile.push(componentNew);
+componentFile.push(componentNew);//复制英文的配置
 fileSave(path.join(__dirname, '../../examples/i18n/component.json'))
   .write(JSON.stringify(componentFile, null, '  '), 'utf8')
   .end('\n');
@@ -52,9 +52,9 @@ fileSave(path.join(__dirname, '../../examples/nav.config.json'))
 
 // docs 下新建对应文件夹
 try {
-  fs.statSync(path.resolve(__dirname, `../../examples/docs/${ lang }`));
+  fs.statSync(path.resolve(__dirname, `../../examples/docs/${lang}`));
 } catch (e) {
-  fs.mkdirSync(path.resolve(__dirname, `../../examples/docs/${ lang }`));
+  fs.mkdirSync(path.resolve(__dirname, `../../examples/docs/${lang}`));
 }
 
 console.log('DONE!');

@@ -18,7 +18,7 @@ play:
 	npm run dev:play
 
 new:
-	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
+	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS)) && node build/bin/build-entry.js
 
 new-lang:
 	node build/bin/new-lang.js $(filter-out $@,$(MAKECMDGOALS))

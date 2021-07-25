@@ -88,6 +88,7 @@ import Empty from '../packages/empty/index.js';
 import Descriptions from '../packages/descriptions/index.js';
 import DescriptionsItem from '../packages/descriptions-item/index.js';
 import Result from '../packages/result/index.js';
+import HelloWorld from '../packages/hello-world/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -175,6 +176,7 @@ const components = [
   Descriptions,
   DescriptionsItem,
   Result,
+  HelloWorld,
   CollapseTransition
 ];
 
@@ -302,5 +304,6 @@ export default {
   Empty,
   Descriptions,
   DescriptionsItem,
-  Result
+  Result,
+  HelloWorld
 };
